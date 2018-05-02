@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box; /*define cómo se calculan el ancho y la altura de un elemento*/
+}
+
+.parrafo{
+  font: 20px Century Gothic;
+  text-align: center;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    resize: vertical;
+    float: right;
+    font: 20px arial, sans-serif;
+}
+
+input[type=password]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    resize: vertical;
+    float: right;
+    font: 20px arial, sans-serif;
+}
+
+input[type=submit] {
+    background-color: #4951EE;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin:0px auto; 
+    display:block;
+    font: 20px arial, sans-serif;
+    /*float: left;*/
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font: 20px arial, sans-serif;
+}
+
+input[type=submit]:hover {
+    background-color: #B9B6F8;
+    color: black;
+    /*font: bold 20px arial, sans-serif;*/
+}

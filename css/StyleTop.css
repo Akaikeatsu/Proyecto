@@ -1,0 +1,83 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+h1{
+  text-align: center;
+  color:rgb(1, 1, 1);
+  font: 30px Century Gothic;
+}
+
+img{
+  width:110%;
+}
+
+/*.contacto{
+  width:600px;
+  position:absolute;
+  left:50%;
+  margin-left:-620px;
+  margin-top: 30px;
+}*/
+
+.cabecera{
+  background-color:rgb(237, 45, 45);
+}
+
+.title{
+  font-family: Century Gothic;
+  font-size: 30px;
+  color: #fff;
+}
+
+
+.menu{
+  background-color:rgb(237, 45, 45);
+  float: right;
+  margin-top: 30px;
+}
+
+.menu ul{
+  list-style-type: none; /*desactivar viñetas*/
+  overflow: hidden;/* especifica que sucede si el contenido del cuadro de un elemento se desborda*/
+}
+
+.menu li{
+  display: inline-block;
+  font: 14px Century Gothic;
+}
+
+.menu li a{
+  display: block;
+  color: white;
+  font: Century Gothic;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover{
+  background-color:rgb(238, 232, 66);
+  color: rgb(0, 0, 0);
+}
+
+.desplegable li ul{
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+
+.desplegable li:hover>ul{
+  display: inline-block;
+}
+
+.desplegable li ul li{
+  position: relative;
+  width: 117px;
+  background-color: #A90C0C;
+}
+
+#info{
+  color: white;
+}

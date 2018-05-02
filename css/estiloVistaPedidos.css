@@ -1,0 +1,127 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+
+
+.informacion{
+  height: 110px;
+background-color:rgb(237, 45, 45);
+}
+
+.contacto{
+width:600px;
+position:absolute;
+left:50%;
+margin-left:-620px;
+margin-top: 30px;
+}
+
+.title{
+text-align: center;
+font-family: Century Gothic;
+font-size: 30px;
+color: #fff;
+}
+
+
+.encabezado h1{
+  text-align: center;
+  color:rgb(1, 1, 1);
+  font: 25px Century Gothic;
+}
+
+.menu{
+  background-color:rgb(237, 45, 45);
+  width: 360px;
+  float: right;
+  margin-top: 30px;
+}
+
+.menu ul{
+  list-style-type: none; /*desactivar viñetas*/
+  overflow: hidden;/* especifica que sucede si el contenido del cuadro de un elemento se desborda*/
+}
+.menu li{
+  display: inline-block;
+  font: 14px Century Gothic;
+}
+
+.menu li a{
+  display: block;
+  color: white;
+  font: Century Gothic;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu li a:hover{
+  background-color:rgb(238, 232, 66);
+  color: rgb(0, 0, 0);
+}
+
+
+label:not(#pedido) {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font: 15px Century Gothic;
+}
+
+.container {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tabla{
+  overflow:scroll;
+  height: 500px;
+}
+
+td{
+  text-align: center;
+  font: 13px Century Gothic;
+  background-color: rgb(232, 236, 59);
+}
+
+img{
+ width:5%;
+ position:absolute;
+ left:50%;
+ margin-left:-650px;
+ margin-top: 10px;
+}
+
+#campo{
+      font: bold 15px Century Gothic;
+     width: 20%;
+     margin-left:20px;
+}
+
+.resultado{
+  margin-left:25px;
+  width: auto;
+}
+
+.datosEnvio{
+  height: 130px;
+}
+.datosExtra{
+  height: 260px;
+}
+.totales{
+  width: 500px;
+}
+.posibles{
+margin-left: 500px;
+margin-top: -258px;
+}
+.pie {
+  margin-top: 150px;
+    clear: both;
+    text-align: center;
+    color: black;
+    font:12px Century Gothic;
+}

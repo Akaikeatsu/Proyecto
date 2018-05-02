@@ -1,0 +1,144 @@
+*{
+margin: 0px;
+padding: 0px;
+}
+
+.informacion{
+  height: 110px;
+  background-color:rgb(237, 45, 45);
+}
+
+.contacto{
+width:600px;
+position:absolute;
+left:50%;
+margin-left:-620px;
+margin-top: 30px;
+}
+
+.title{
+text-align: center;
+font-family: Century Gothic;
+font-size: 30px;
+color: #fff;
+}
+
+.encabezado h1{
+  text-align: center;
+  color:rgb(1, 1, 1);
+  font: 25px Century Gothic;
+}
+
+
+.menu{
+  background-color:rgb(237, 45, 45);
+  width: 360px;
+  float: right;
+  margin-top: 30px;
+}
+
+.menu ul{
+  list-style-type: none; /*desactivar viñetas*/
+  overflow: hidden;/* especifica que sucede si el contenido del cuadro de un elemento se desborda*/
+}
+.menu li{
+  display: inline-block;
+  font: 14px Century Gothic;
+}
+
+.menu li a{
+  display: block;
+  color: white;
+  font: Century Gothic;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.menu li a:hover{
+  background-color:rgb(238, 232, 66);
+  color: rgb(0, 0, 0);
+}
+
+
+
+.col {
+    float: left;
+    width: 90%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input[type=text]{
+    width: 80%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+    resize: vertical;
+    float: right;
+    font: 20px Century Gothic;
+}
+
+input[type=submit] {
+    background-color: #4951EE;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin:0px auto;
+    display:block;
+    font: 20px Century Gothic;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font: 15px Century Gothic;
+}
+
+input[type=submit]:hover {
+    background-color: : #4951EE;
+    color: white;
+    font: 22px Century Gothic;
+}
+
+.container {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tabla{
+  overflow:scroll;
+  height: 500px;
+}
+
+td{
+  text-align: center;
+  font: 15px Century Gothic;
+  background-color: rgb(232, 236, 59);
+}
+
+img{
+ width:5%;
+ position:absolute;
+ left:50%;
+ margin-left:-650px;
+ margin-top: 10px;
+}
+
+.pie {
+  margin-top: 150px;
+    clear: both;
+    text-align: center;
+    color: black;
+    font:12px Century Gothic;
+}

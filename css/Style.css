@@ -1,0 +1,194 @@
+input[type=submit] {
+    background-color: #4951EE;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin:0px auto; 
+    display:block;
+    font: 20px arial, sans-serif;
+    /*float: left;*/
+}
+
+input[type=submit]:hover {
+    background-color: #B9B6F8;
+    color: black;
+    /*font: bold 20px arial, sans-serif;*/
+}
+
+#sidebar {
+    background-color:rgb(237, 45, 45);
+}
+
+#btn-tabla{
+    background-color: #4951EE;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin:0px auto; 
+    display:block;
+    font: 15px arial, sans-serif;
+    /*float: left;*/
+}
+
+#btn-tabla:hover{
+    background-color: #7E7EF5;
+    color: black;
+}
+
+/*#Principal{
+  background: #F7FC75;
+}*/
+
+#menu{
+	background: black;
+}
+
+#desplegable li ul{
+  display: none;
+  position: absolute;
+  width: 32.5%;
+}
+
+#desplegable li:hover>ul{
+  display: block;
+}
+
+#desplegable li ul li{
+  position: relative;
+  background-color:black;
+}
+
+#opt{
+	color: white;                       /*Agrega color blanco*/
+	font-size: 20px;
+}
+
+#opt:hover{
+  color: white;                       /*Agrega color blanco*/
+  background-color: #6B6A6A;          /*Agrega color Gris cuando el muse pasa por el enlace*/
+}
+
+/*#content{
+	background: #F7FC75;
+}*/
+
+#images{
+	background: #747DEF;
+  border: 5px solid #FB3131;
+	border-radius: 25px;
+}
+
+#tupla{
+	background-color: #fff;
+}
+
+#tupla:hover{
+	background-color: #D5D4D4;
+}
+
+#totales{
+	background-color: #D33B3B;
+}
+
+#campo{
+  font: bold 17px Century Gothic;
+  width: 25%;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+.resultado{
+  font: 17px Century Gothic;
+  width: 55%;
+}
+
+.ficha {
+    width: 900px;
+    height: 325px;
+    margin-left:auto;
+    margin-right: auto;
+    padding: 20px;
+    box-shadow: 5px -8px 12px rgb(57, 57, 57);
+}
+
+.datos{
+  width:700px;
+  position:absolute;
+  margin-left:320px;
+  margin-top: -275px;
+}
+
+.usuario{
+  width: 35%;
+  margin-top: -20px;
+  margin-left: -20px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/* Customize the label (the container) */
+.opcion {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.opcion input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.opcion:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.opcion input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.opcion input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.opcion .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
