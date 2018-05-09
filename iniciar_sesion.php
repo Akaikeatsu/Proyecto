@@ -37,7 +37,7 @@
       			<input type="submit" value="Iniciar Sesi&oacute;n">
     		</div>
 
-   	  	</form>
+   	  </form>
   	</section>
 
 <?php 

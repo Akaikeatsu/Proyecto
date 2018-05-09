@@ -19,6 +19,7 @@ $Usuario=new Usuario();
 	
 	if ($sErr == ""){
 		include_once("header.html");
+		include_once("menu.php");
 	}
 	else{
 		/*header("Location: error.php?sErr=".$sErr);*/
@@ -26,7 +27,7 @@ $Usuario=new Usuario();
 	}
  ?>
         <section>
-			<h1>Bienvenido <?php echo $Nombre;?></h1>
+			<h1>Bienvenido: <?php echo $Nombre;?></h1>
 		</section>
 <?php
 include_once("footer.html");

@@ -13,7 +13,7 @@
      	function conectar(){
 		$bRet = false;
 			try{
-				$this->oConexion = new PDO("pgsql:dbname=dacsa; host=localhost; user=dcsa; password=dcsa1");
+				$this->oConexion = new PDO("pgsql:dbname=dacsa; host=localhost; user=postgres; password=no32sdc1");
 				$bRet = true;
 			}catch(Exception $e){
 				throw $e;
