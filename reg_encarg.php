@@ -23,7 +23,7 @@
 
           	<div class="row justify-content-center">
             	<div class="col-10 align-item-center">
-              		<input type="text" name="tel" placeholder="Teléfono" maxlength="12" pattern="[0-9]+"/>
+              		<input type="text" name="tel" placeholder="Teléfono" maxlength="10" pattern="[0-9]+{10}"/>
             	</div>
           	</div>
           	<br>
@@ -37,7 +37,7 @@
 
           	<div class="row justify-content-center">
             	<div class="col-10 align-item-center">
-              		<input type="text" name="user" placeholder="Nombre de Usuario (mínimo 8 caracteres)" maxlength="15" pattern="[A-Za-z0-9]{8,15}|[A-Za-z]{8,15}">
+              		<input type="text" name="usuario" placeholder="Nombre de Usuario (mínimo 8 caracteres)" maxlength="15" pattern="[A-Za-z0-9]{8,15}|[A-Za-z]{8,15}">
             	</div>
           	</div>
           	<br>
@@ -49,9 +49,7 @@
           	</div>
           	<br>
 
-			<input type="hidden" name="dom" value="N/A">
-			<input type="hidden" name="rfc" value="N/A">	
-          	<input type="hidden" name="tipo" value="2">
+          	<input type="hidden" name="tipo" value=2>
 
           	<div class="row">
             	<input type="submit" value="Registrar">

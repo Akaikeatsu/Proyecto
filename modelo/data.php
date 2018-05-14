@@ -66,7 +66,7 @@ class Data {
     }
 
     function setRFC($pRFC){
-       $this->RFC = $pDomicilio;
+       $this->RFC = $pRFC;
     }   
     function getRFC(){
        return $this->RFC;
@@ -78,59 +78,84 @@ class Data {
     function getTipo(){
        return $this->Tipo;
     }
-
 	
-	/*Busca por clave, regresa verdadero si lo encontró*/
 	function buscar(){
-	$Connection=new conexion();
-	$sQuery="";
-	$Result=null;
-	$bRet = false;
-		if ($this->Id==0)
-			throw new Exception("Data->buscar(): faltan datos");
-		else{
-			if ($Connection->conectar()){
-		 		$sQuery = " SELECT nombre, telefono, correo, dom_fiscal, rcf, tipo
-								FROM public.usuario WHERE id_usuario = ".$this->Id;
-				$Result = $Connection->ejecutarConsulta($sQuery);
-				$Connection->desconectar();
-				if ($Result){
-					$this->Nombre = $Result[0][0];
-					$this->Telefono = $Result[0][1];
-					$this->Email = $Result[0][2];
-					$this->Domicilio = $Result[0][3];
-					$this->RFC = $Result[0][4];
-					$this->Tipo = $Result[0][5];
-					$bRet = true;
-				}
-			} 
-		}
+  	$Connection=new conexion();
+  	$sQuery="";
+  	$Result=null;
+  	$bRet = false;
+  		if ($this->Id==0)
+  			throw new Exception("Data->buscar(): faltan datos");
+  		else{
+  			if ($Connection->conectar()){
+  		 		$sQuery = " SELECT nombre, telefono, correo, tipo
+  								FROM public.usuario WHERE id_usuario = ".$this->Id;
+  				$Result = $Connection->ejecutarConsulta($sQuery);
+  				$Connection->desconectar();
+  				if ($Result){
+  					$this->Nombre = $Result[0][0];
+  					$this->Telefono = $Result[0][1];
+  					$this->Email = $Result[0][2];
+  					$this->Tipo = $Result[0][3];
+  					$bRet = true;
+  				}
+  			} 
+  		}
 		return $bRet;
 	}
 
-  function registrar(){
-  $Connection=new conexion();
-  $sQuery="";
-  $nAfectados=-1;
-    if ($this->UserName == "" OR $this->Password == "" OR $this->Nombre == "" OR $this->Telefono == 0 
-        OR $this->Email == "" OR $this->Domicilio == "" OR $this->RFC == "" OR $this->Tipo==0)
-      throw new Exception("Data->registrar(): faltan datos");
-    else{
-      if ($Connection->conectar()){
-        $sQuery = "INSERT INTO public.usuario(nombre_usuario, contrasenia, nombre, telefono, correo, dom_fiscal, rcf, tipo)
-                    VALUES (
-                            '".$this->UserName."', 
-                            '".$this->Password."',
-                            '".$this->Nombre."', 
-                            ".$this->Telefono.", 
-                            '".$this->Email."', 
-                            '".$this->Domicilio."', 
-                            '".$this->RFC."', 
-                            ".$this->Tipo.");";
-        $nAfectados = $Connection->ejecutarComando($sQuery);
-        $Connection->desconectar();     
+  function getId_by_UserName(){
+    $Connection=new conexion();
+    $sQuery="";
+    $Result=null;
+    $bRet = false;
+      if ($this->UserName == "")
+        throw new Exception("Data->getId_by_UserName(): faltan datos");
+      else{
+        if ($Connection->conectar()){
+          $sQuery = " SELECT id_usuario FROM public.usuario WHERE nombre_usuario = '".$this->UserName."'";
+          $Result = $Connection->ejecutarConsulta($sQuery);
+          $Connection->desconectar();
+          if ($Result){
+            $this->Id = $Result[0][0];
+            $bRet = true;
+          }
+        } 
       }
-    }
+    return $bRet;
+  }
+
+  function registrar_usuario(){
+    $Connection=new conexion();
+    $sQuery="";
+    $nAfectados=-1;
+      if ($this->UserName == "" OR $this->Password == "" OR $this->Nombre == "" OR $this->Telefono == 0 OR $this->Email == "" OR $this->Tipo==0)
+          throw new Exception("Data->registrar_usuario(): faltan datos");
+      else{
+        if ($Connection->conectar()){
+          $sQuery = "INSERT INTO public.usuario(nombre_usuario, contrasenia, nombre, telefono, correo, tipo) VALUES (
+                    '".$this->UserName."', '".$this->Password."', '".$this->Nombre."', ".$this->Telefono.", '".$this->Email."',".$this->Tipo.");";
+          $nAfectados = $Connection->ejecutarComando($sQuery);
+          $Connection->desconectar();     
+        }
+      }
+    return $nAfectados;
+  }
+
+  function add_info_cliente(){
+    $Connection=new conexion();
+    $sQuery="";
+    $nAfectados=-1;
+      if ($this->Id == 0 OR $this->Domicilio == "" OR $this->RFC == "")
+          throw new Exception("Data->add_info_cliente(): faltan datos");
+      else{
+        if ($Connection->conectar()){
+          $sQuery = "INSERT INTO public.info_cliente(dom_fiscal, rfc, id_usuario)
+                      VALUES ('".$this->Domicilio."', '".$this->RFC."', ".$this->Id.");";
+          $nAfectados = $Connection->ejecutarComando($sQuery);
+          $Connection->desconectar();     
+        }
+      }
     return $nAfectados;
   }
 	

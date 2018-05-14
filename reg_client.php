@@ -51,7 +51,7 @@
 
      		<div class="row justify-content-center">
       			<div class="col-10 align-item-center">
-          			<input type="text" name="user" placeholder="Nombre de Usuario" maxlength="15" pattern="[A-Za-z0-9]{8,10}|[A-Za-z]{8,15}">
+          			<input type="text" name="usuario" placeholder="Nombre de Usuario" maxlength="15" pattern="[A-Za-z0-9]{8,10}|[A-Za-z]{8,15}">
         		</div>
      		</div>
           	<br>
@@ -62,7 +62,7 @@
         		</div>
      		</div>
 
-			<input type="hidden" name="tipo" value="1">
+			<input type="hidden" name="tipo" value=1>
 
           	<br>
 
